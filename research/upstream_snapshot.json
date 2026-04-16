@@ -1,0 +1,74 @@
+{
+  "upstream": {
+    "owner": "THUDM",
+    "repo": "LongBench",
+    "source_url": "https://github.com/THUDM/LongBench",
+    "local_path": "/Users/Rb/Documents/LLM based projects /sources/THUDM__LongBench",
+    "branch": "main",
+    "default_branch": "main",
+    "commit": "2e00731f8d0bff23dc4325161044d0ed8af94c1e",
+    "fork_requested": false,
+    "fork_result": ""
+  },
+  "audit": {
+    "file_count": 54,
+    "text_file_count": 41,
+    "top_suffixes": [
+      [
+        ".py",
+        17
+      ],
+      [
+        ".png",
+        8
+      ],
+      [
+        ".txt",
+        8
+      ],
+      [
+        ".md",
+        7
+      ],
+      [
+        ".json",
+        6
+      ],
+      [
+        ".sh",
+        3
+      ],
+      [
+        "<none>",
+        3
+      ],
+      [
+        ".bib",
+        1
+      ]
+    ],
+    "style_counts": {
+      "other": 32,
+      "PascalCase": 9,
+      "snake_case": 11,
+      "hidden": 1,
+      "camelCase": 1
+    },
+    "token_hits": {},
+    "findings": [
+      "No dedicated docs directory detected for architecture or operations guidance.",
+      "No obvious tests directory or test files detected.",
+      "No GitHub Actions workflow detected for repeatable checks.",
+      "No container packaging signal detected, which makes demos and deployment less portable.",
+      "Mixed filename conventions detected: PascalCase, snake_case."
+    ],
+    "strengths": [
+      "Repository has a top-level README."
+    ],
+    "largest_files": [],
+    "has_tests": false,
+    "has_docs": false,
+    "has_ci": false,
+    "has_docker": false
+  }
+}

@@ -1,0 +1,114 @@
+{
+  "slug": "longbench-context-stress-lab",
+  "title": "LongBench Context Stress Lab",
+  "project_type": "llm",
+  "domain": "Long-Context Evaluation",
+  "summary": "Build a lab for long-context failure analysis, chunking stress tests, and context window benchmarking across tasks.",
+  "tags": [
+    "longbench",
+    "long-context",
+    "llm",
+    "evaluation"
+  ],
+  "accent": "#3bc82c",
+  "secondary_accent": "#a9a92c",
+  "dashboard_metrics": [
+    {
+      "label": "Resolution Rate",
+      "value": "71%",
+      "delta": "+5.8%"
+    },
+    {
+      "label": "Answer Quality",
+      "value": "86%",
+      "delta": "+2.2%"
+    },
+    {
+      "label": "Ops Time Saved",
+      "value": "18h",
+      "delta": "+3h"
+    }
+  ],
+  "sample_features": {
+    "query": "Summarize the highest priority risk and recommended next step.",
+    "audience": "leadership"
+  },
+  "sample_metrics": {
+    "acquisition": 58.4,
+    "activation": 53.0,
+    "retention": 62.8,
+    "revenue": 107.8
+  },
+  "knowledge_base": [
+    "LongBench Context Stress Lab is positioned as a Long-Context Evaluation starter that emphasizes fast iteration, clear documentation, and production-friendly interfaces.",
+    "The primary value proposition is: Build a lab for long-context failure analysis, chunking stress tests, and context window benchmarking across tasks.",
+    "Recommended operating model: ship a small API, add observability, validate outputs with stakeholder review, and monitor the top business KPI every week.",
+    "Typical stakeholders include analytics, operations, product, and leadership teams working on longbench, long-context, llm, evaluation.",
+    "Source paper: LongBench: A Bilingual, Multitask Benchmark for Long Context Understanding",
+    "Official repo: https://github.com/THUDM/LongBench",
+    "Production differentiation focus: Wrap the upstream long-context evaluation capability in a reviewable operator workflow instead of a single demo script.; Surface latency, quality, and execution traces so the system feels deployment-ready rather than experimental.; Design a distinct UI and reporting layer that makes the project portfolio-friendly and easier to explain."
+  ],
+  "research_key": "longbench-context-stress-lab",
+  "research_score": 9.643,
+  "paper_title": "LongBench: A Bilingual, Multitask Benchmark for Long Context Understanding",
+  "paper_url": "https://arxiv.org/abs/2308.14508",
+  "repo_url": "https://github.com/THUDM/LongBench",
+  "repo_org": "THUDM",
+  "why_high_score": [
+    "Official or primary upstream repo with 1152 GitHub stars.",
+    "Active maintenance signal with recent push at 2025-01-15T02:04:04Z.",
+    "LongBench v2 and LongBench (ACL 25'&24')"
+  ],
+  "differentiation_hooks": [
+    "Wrap the upstream long-context evaluation capability in a reviewable operator workflow instead of a single demo script.",
+    "Surface latency, quality, and execution traces so the system feels deployment-ready rather than experimental.",
+    "Design a distinct UI and reporting layer that makes the project portfolio-friendly and easier to explain."
+  ],
+  "app_archetype": "copilot",
+  "ui_profile": {
+    "layout": "horizon",
+    "surface": "paper",
+    "font_stack": "\"Avenir Next\", \"Segoe UI\", sans-serif",
+    "radius": 24,
+    "shadow": 48,
+    "eyebrow_style": "outline",
+    "module_columns": 3,
+    "hero_align": "left",
+    "headline_mode": "normal"
+  },
+  "app_modules": [
+    {
+      "label": "Workflow 01",
+      "title": "Routing Simulator",
+      "description": "Preview how a request gets prioritized or routed through the workflow.",
+      "endpoint": "/score",
+      "input_mode": "json",
+      "cta": "Simulate Route",
+      "prefill": "{\n  \"features\": {\n    \"query\": \"Summarize the highest priority risk and recommended next step.\",\n    \"audience\": \"leadership\"\n  }\n}",
+      "hint": "Routing score and top signals will appear here.",
+      "span": "normal"
+    },
+    {
+      "label": "Workflow 02",
+      "title": "Operator Brief",
+      "description": "Generate a concise recommended action set for the current workflow state.",
+      "endpoint": "/recommend",
+      "input_mode": "json",
+      "cta": "Generate Brief",
+      "prefill": "{\n  \"prompt\": \"Recommend the next best action for LongBench Context Stress Lab.\",\n  \"features\": {\n    \"query\": \"Summarize the highest priority risk and recommended next step.\",\n    \"audience\": \"leadership\"\n  },\n  \"metrics\": {\n    \"acquisition\": 58.4,\n    \"activation\": 53.0,\n    \"retention\": 62.8,\n    \"revenue\": 107.8\n  }\n}",
+      "hint": "Operator brief and recommended actions will appear here.",
+      "span": "wide"
+    },
+    {
+      "label": "Workflow 03",
+      "title": "Grounded Prompt",
+      "description": "Ask a targeted question and inspect the support context behind the answer.",
+      "endpoint": "/query",
+      "input_mode": "text",
+      "cta": "Run Prompt",
+      "prefill": "What is the top priority recommendation for LongBench Context Stress Lab?",
+      "hint": "Grounded answer and context excerpts will appear here.",
+      "span": "normal"
+    }
+  ]
+}

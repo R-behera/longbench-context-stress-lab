@@ -1,95 +1,29 @@
-
-        <!doctype html>
-        <html lang="en">
-        <head>
-          <meta charset="utf-8">
-          <meta name="viewport" content="width=device-width, initial-scale=1">
-          <title>LongBench Context Stress Lab</title>
-          <link rel="stylesheet" href="./styles.css">
-        </head>
-        <body class="surface-paper">
-          <div class="page layout-horizon eyebrow-outline headline-normal modules-3 hero-align-left">
-            <section class="hero">
-              <div class="panel hero-copy">
-                <span class="eyebrow" data-health>Workflow Copilot</span>
-                <h1 id="project-title">LongBench Context Stress Lab</h1>
-                <p id="project-summary" class="lead">Build a lab for long-context failure analysis, chunking stress tests, and context window benchmarking across tasks.</p>
-                <ul id="project-tags" class="tag-list">
-                  <li>longbench</li><li>long-context</li><li>llm</li><li>evaluation</li>
-                </ul>
-              </div>
-              <div class="panel hero-side">
-                <div class="metric-grid">
-                  <article class='card'><span>Resolution Rate</span><strong>71%</strong><em>+5.8%</em></article>
-<article class='card'><span>Answer Quality</span><strong>86%</strong><em>+2.2%</em></article>
-<article class='card'><span>Ops Time Saved</span><strong>18h</strong><em>+3h</em></article>
-                </div>
-                <div class="mini-grid">
-                  <article class='mini-card'><span>Project Type</span><strong>LLM</strong></article><article class='mini-card'><span>Domain</span><strong>Long-Context Evaluation</strong></article><article class='mini-card'><span>Application</span><strong>Workflow Copilot</strong></article><article class='mini-card'><span>Deployment</span><strong>Docker + CI</strong></article>
-                </div>
-              </div>
-            </section>
-            <section class="app-grid">
-              <article class="panel module js-module span-normal">
-          <div class="module-header">
-            <span>Workflow 01</span>
-            <h2>Routing Simulator</h2>
-            <p>Preview how a request gets prioritized or routed through the workflow.</p>
-          </div>
-          <textarea class="js-input">{
-  &quot;features&quot;: {
-    &quot;query&quot;: &quot;Summarize the highest priority risk and recommended next step.&quot;,
-    &quot;audience&quot;: &quot;leadership&quot;
-  }
-}</textarea>
-          <div class="button-row">
-            <button class="js-run" data-endpoint="/score" data-input-mode="json">Simulate Route</button>
-          </div>
-          <pre class="js-output">Routing score and top signals will appear here.</pre>
-        </article>
-<article class="panel module js-module span-wide">
-          <div class="module-header">
-            <span>Workflow 02</span>
-            <h2>Operator Brief</h2>
-            <p>Generate a concise recommended action set for the current workflow state.</p>
-          </div>
-          <textarea class="js-input">{
-  &quot;prompt&quot;: &quot;Recommend the next best action for LongBench Context Stress Lab.&quot;,
-  &quot;features&quot;: {
-    &quot;query&quot;: &quot;Summarize the highest priority risk and recommended next step.&quot;,
-    &quot;audience&quot;: &quot;leadership&quot;
-  },
-  &quot;metrics&quot;: {
-    &quot;acquisition&quot;: 58.4,
-    &quot;activation&quot;: 53.0,
-    &quot;retention&quot;: 62.8,
-    &quot;revenue&quot;: 107.8
-  }
-}</textarea>
-          <div class="button-row">
-            <button class="js-run" data-endpoint="/recommend" data-input-mode="json">Generate Brief</button>
-          </div>
-          <pre class="js-output">Operator brief and recommended actions will appear here.</pre>
-        </article>
-<article class="panel module js-module span-normal">
-  <div class="module-header">
-    <span>Workflow 03</span>
-    <h2>Grounded Prompt</h2>
-    <p>Ask a targeted question and inspect the support context behind the answer.</p>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>LongBench Context Stress Lab App</title>
+  <link rel="stylesheet" href="/assets/styles.css" />
+</head>
+<body>
+  <div id="scene" class="app-scene">
+    <header class="shell hero">
+      <div>
+        <span class="eyebrow">Applied AI product systems</span>
+        <h1>LongBench Context Stress Lab</h1>
+        <p>![Demo Screenshot](demo/screenshot.png)</p>
+      </div>
+      <aside class="status-card">
+        <div class="pill">API connected</div>
+        <div class="pill">operations lead</div>
+        <div class="pill">depth-columns</div>
+      </aside>
+    </header>
+    <section id="metrics" class="grid metrics"></section>
+    <section id="signals" class="grid signals"></section>
   </div>
-  <textarea class="js-input module-input-text">What is the top priority recommendation for LongBench Context Stress Lab?</textarea>
-  <div class="button-row">
-    <button class="js-run" data-endpoint="/query" data-input-mode="text">Run Prompt</button>
-  </div>
-  <pre class="js-output">Grounded answer and context excerpts will appear here.</pre>
-</article>
-            </section>
-            <footer class="footer">
-              <span>Long-Context Evaluation • LLM • Workflow Copilot</span>
-              <span>longbench-context-stress-lab</span>
-            </footer>
-          </div>
-          <script id="bootstrap-data" type="application/json">{"project": {"slug": "longbench-context-stress-lab", "title": "LongBench Context Stress Lab", "project_type": "llm", "domain": "Long-Context Evaluation", "summary": "Build a lab for long-context failure analysis, chunking stress tests, and context window benchmarking across tasks.", "tags": ["longbench", "long-context", "llm", "evaluation"]}, "app_archetype": "copilot", "ui_profile": {"layout": "horizon", "surface": "paper", "font_stack": "\"Avenir Next\", \"Segoe UI\", sans-serif", "radius": 24, "shadow": 48, "eyebrow_style": "outline", "module_columns": 3, "hero_align": "left", "headline_mode": "normal"}, "app_modules": [{"label": "Workflow 01", "title": "Routing Simulator", "description": "Preview how a request gets prioritized or routed through the workflow.", "endpoint": "/score", "input_mode": "json", "cta": "Simulate Route", "prefill": "{\n  \"features\": {\n    \"query\": \"Summarize the highest priority risk and recommended next step.\",\n    \"audience\": \"leadership\"\n  }\n}", "hint": "Routing score and top signals will appear here.", "span": "normal"}, {"label": "Workflow 02", "title": "Operator Brief", "description": "Generate a concise recommended action set for the current workflow state.", "endpoint": "/recommend", "input_mode": "json", "cta": "Generate Brief", "prefill": "{\n  \"prompt\": \"Recommend the next best action for LongBench Context Stress Lab.\",\n  \"features\": {\n    \"query\": \"Summarize the highest priority risk and recommended next step.\",\n    \"audience\": \"leadership\"\n  },\n  \"metrics\": {\n    \"acquisition\": 58.4,\n    \"activation\": 53.0,\n    \"retention\": 62.8,\n    \"revenue\": 107.8\n  }\n}", "hint": "Operator brief and recommended actions will appear here.", "span": "wide"}, {"label": "Workflow 03", "title": "Grounded Prompt", "description": "Ask a targeted question and inspect the support context behind the answer.", "endpoint": "/query", "input_mode": "text", "cta": "Run Prompt", "prefill": "What is the top priority recommendation for LongBench Context Stress Lab?", "hint": "Grounded answer and context excerpts will appear here.", "span": "normal"}], "sample_features": {"query": "Summarize the highest priority risk and recommended next step.", "audience": "leadership"}, "sample_metrics": {"acquisition": 58.4, "activation": 53.0, "retention": 62.8, "revenue": 107.8}, "knowledge_base": ["LongBench Context Stress Lab is positioned as a Long-Context Evaluation starter that emphasizes fast iteration, clear documentation, and production-friendly interfaces.", "The primary value proposition is: Build a lab for long-context failure analysis, chunking stress tests, and context window benchmarking across tasks.", "Recommended operating model: ship a small API, add observability, validate outputs with stakeholder review, and monitor the top business KPI every week.", "Typical stakeholders include analytics, operations, product, and leadership teams working on longbench, long-context, llm, evaluation.", "Source paper: LongBench: A Bilingual, Multitask Benchmark for Long Context Understanding", "Official repo: https://github.com/THUDM/LongBench", "Production differentiation focus: Wrap the upstream long-context evaluation capability in a reviewable operator workflow instead of a single demo script.; Surface latency, quality, and execution traces so the system feels deployment-ready rather than experimental.; Design a distinct UI and reporting layer that makes the project portfolio-friendly and easier to explain."], "dashboard_metrics": [{"label": "Resolution Rate", "value": "71%", "delta": "+5.8%"}, {"label": "Answer Quality", "value": "86%", "delta": "+2.2%"}, {"label": "Ops Time Saved", "value": "18h", "delta": "+3h"}]}</script>
-          <script src="./app.js"></script>
-        </body>
-        </html>
+  <script>window.PROJECT_MANIFEST = {"slug": "longbench-context-stress-lab", "title": "LongBench Context Stress Lab", "summary": "![Demo Screenshot](demo/screenshot.png)", "domain": "Applied AI product systems", "audience": "operations lead", "promise": "Turn promising technical capability into a production-shaped workflow for real teams.", "hero": ["Production-grade app scaffold with API, CI, tests, Docker, and GitHub Pages landing.", "3D landing surface designed for GitHub Pages and recruiter-friendly storytelling.", "App backend structured for local or container deployment without changing the product narrative."], "kpis": [{"label": "Workflow clarity", "value": "85%", "note": "Operator actions mapped to product stages"}, {"label": "Deployment posture", "value": "API + Docker", "note": "Local and containerized startup paths"}, {"label": "Presentation layer", "value": "3D Pages ready", "note": "Static GitHub landing page included"}], "stages": ["ingest", "validate", "analyze", "decide", "monitor"], "cards": [{"title": "Operator cockpit", "body": "One-screen surface for the operations lead to understand what matters first."}, {"title": "API contract", "body": "Structured endpoints for health, manifest, readiness, and showcase data."}, {"title": "Deployment path", "body": "Repository includes Docker, Compose, CI workflow, and a Pages-ready landing surface."}], "scene": "depth-columns", "theme": {"bg": "#0c0812", "surface": "#171022", "ink": "#f5f0ff", "muted": "#a99bc2", "accent": "#c38fff", "accent2": "#6cf0ff"}, "pages_url": "https://r-behera.github.io/longbench-context-stress-lab/", "api_examples": {"health": {"status": "ok", "project": "longbench-context-stress-lab"}, "readiness": {"api": "ready", "landing_page": "docs/index.html", "container": "Dockerfile present"}, "signals": [{"name": "Decision coverage", "status": "strong", "detail": "App and landing narrative aligned"}, {"name": "Operator context", "status": "strong", "detail": "Primary user anchored as operations lead"}, {"name": "Delivery path", "status": "ready", "detail": "Pages + containerized app scaffold generated"}]}};</script>
+  <script src="/assets/app.js"></script>
+</body>
+</html>
